@@ -150,13 +150,71 @@
 
     <main class="main container">
       <section class="hero">
-        <h1 class="hero_title"><em class="hero_accent">Enjoy</em> premium coffee at our charming cafe</h1>
+        <h1 class="hero_title"><em class="accent">Enjoy</em> premium coffee at our charming cafe</h1>
         <p class="hero_text">
           With its inviting atmosphere and delicious coffee options, the Coffee
           House Resource is a popular destination for coffee lovers and those
           seeking a warm and inviting space to enjoy their favorite beverage.
         </p>
         <a href="catalog.html" class="hero_btn">Menu</a>
+      </section>
+
+      <section class="slider" id="favorite-coffee">
+        <h2 class="slider_title">
+          Choose your <em class="accent">favorite</em> coffee
+        </h2>
+        <div class="slider_box">
+          <button type="button" class="slider_arrow" aria-label="Previous coffee">
+            <svg
+              width="60"
+              height="60"
+              viewBox="0 0 60 60"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M36.5 30H24M30 36L24 30L30 24"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </button>
+          <div class="slider_card">
+            <img
+              class="slider_img"
+              src="assets/slider/coffee-slider-1.png"
+              alt="S’mores Frappuccino"
+            />
+            <h3 class="slider_name">S’mores Frappuccino</h3>
+            <p class="slider_text">
+              This new drink takes an espresso and mixes it with brown sugar
+              and cinnamon before being topped with oat milk.
+            </p>
+            <p class="slider_price">$5.50</p>
+          </div>
+          <button type="button" class="slider_arrow" aria-label="Next coffee">
+            <svg
+              width="60"
+              height="60"
+              viewBox="0 0 60 60"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M24 30H36.5M30.5 36L36.5 30L30.5 24"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </button>
+        </div>
+        <div class="slider_pagination">
+          <span class="slider_control slider_control-active"></span>
+          <span class="slider_control"></span>
+          <span class="slider_control"></span>
+        </div>
       </section>
     </main>
 

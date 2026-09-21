@@ -7,6 +7,10 @@ p {
   margin: 0;
 }
 
+button {
+  padding: 0;
+}
+
 /* Light theme - default */
 :root {
   /* text */
@@ -296,7 +300,7 @@ footer .first_column .sub_title {
   color: var(--text-inverse);
 }
 
-.hero_accent {
+.accent {
   font-style: italic;
   color: var(--text-accent);
 }
@@ -319,6 +323,112 @@ footer .first_column .sub_title {
   font-weight: var(--fw-semibold);
   text-decoration: none;
   cursor: pointer;
+}
+
+/* Slider */
+
+.slider {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 100px;
+}
+
+.slider_title {
+  font-size: var(--fs-h2);
+  line-height: var(--lh-h2);
+  font-weight: var(--fw-semibold);
+  color: var(--text-primary);
+  text-align: center;
+}
+
+.slider_box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-top: 40px;
+}
+
+.slider_card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 480px;
+  text-align: center;
+}
+
+.slider_img {
+  width: 480px;
+  height: 480px;
+}
+
+.slider_name {
+  margin-top: 20px;
+  font-size: var(--fs-h3);
+  line-height: var(--lh-h3);
+  font-weight: var(--fw-semibold);
+  color: var(--text-primary);
+}
+
+.slider_text {
+  margin-top: 16px;
+  font-size: var(--fs-body);
+  line-height: var(--lh-body);
+  color: var(--text-primary);
+}
+
+.slider_price {
+  margin-top: 16px;
+  font-size: var(--fs-h3);
+  line-height: var(--lh-h3);
+  font-weight: var(--fw-semibold);
+  color: var(--text-primary);
+}
+
+.slider_arrow {
+  display: grid;
+  place-items: center;
+  width: 60px;
+  height: 60px;
+  border: 1px solid var(--border-inverse);
+  border-radius: 50%;
+  background-color: transparent;
+  color: var(--text-primary);
+  cursor: pointer;
+  transition:
+    background-color 0.3s,
+    border-color 0.3s,
+    color 0.3s;
+}
+
+.slider_arrow svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.slider_arrow:hover {
+  background-color: var(--bg-container);
+  border-color: var(--bg-container);
+  color: var(--text-inverse);
+}
+
+.slider_pagination {
+  display: flex;
+  gap: 12px;
+  margin-top: 40px;
+}
+
+.slider_control {
+  width: 40px;
+  height: 4px;
+  border-radius: 2px;
+  background-color: var(--border-primary);
+}
+
+.slider_control-active {
+  background-color: var(--text-primary);
 }
 
 /* adaptive */
@@ -388,6 +498,19 @@ footer .first_column .sub_title {
 
   .header_controls {
     gap: 12px;
+  }
+
+  .slider_arrow {
+    display: none;
+  }
+
+  .slider_card {
+    width: 100%;
+  }
+
+  .slider_img {
+    width: 100%;
+    height: auto;
   }
 
   .hero {
