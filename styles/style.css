@@ -186,7 +186,7 @@ header .header_theme_switcher button[aria-checked="true"] {
   min-height: 450px;
   width: calc(100% - 80px);
   max-width: 1360px;
-  margin: 0 auto;
+  margin: 100px auto 40px auto;
   background-color: var(--bg-container);
   border-radius: 40px;
   align-items: center;
