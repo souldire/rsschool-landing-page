@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -26,7 +26,9 @@
             <a href="index.html#about" class="header_nav_link">About</a>
           </li>
           <li class="header_nav_item">
-            <a href="index.html#mobile-app" class="header_nav_link">Mobile app</a>
+            <a href="index.html#mobile-app" class="header_nav_link"
+              >Mobile app</a
+            >
           </li>
           <li class="header_nav_item">
             <a href="index.html#contacts" class="header_nav_link">Contact us</a>
@@ -149,7 +151,121 @@
       </div>
     </header>
 
-    <main class="main container"></main>
+    <main class="main container">
+      <section class="catalog">
+        <h1 class="catalog_title">
+          Behind each of our cups hides an
+          <em class="accent">amazing surprise</em>
+        </h1>
+        <div class="catalog_tabs" role="tablist" aria-label="Menu categories">
+          <button type="button" class="tab" role="tab" aria-selected="true">
+            <span class="tab_icon"><img src="assets/menu/icons/coffee.png" alt="" /></span>
+            Coffee
+          </button>
+          <button type="button" class="tab" role="tab" aria-selected="false">
+            <span class="tab_icon"><img src="assets/menu/icons/tea.png" alt="" /></span>
+            Tea
+          </button>
+          <button type="button" class="tab" role="tab" aria-selected="false">
+            <span class="tab_icon"><img src="assets/menu/icons/dessert.png" alt="" /></span>
+            Dessert
+          </button>
+        </div>
+        <div class="catalog_grid">
+          <article class="card">
+            <img
+              class="card_img"
+              src="assets/menu/coffee-1.png"
+              alt="Irish coffee"
+            />
+            <h3 class="card_name">Irish coffee</h3>
+            <p class="card_text">
+              Fragrant black coffee with Jameson Irish whiskey and whipped milk
+            </p>
+            <p class="card_price">$7.00</p>
+          </article>
+          <article class="card">
+            <img
+              class="card_img"
+              src="assets/menu/coffee-2.png"
+              alt="Kahlua coffee"
+            />
+            <h3 class="card_name">Kahlua coffee</h3>
+            <p class="card_text">
+              Classic coffee with milk and Kahlua liqueur under a cap of frothed
+              milk
+            </p>
+            <p class="card_price">$7.00</p>
+          </article>
+          <article class="card">
+            <img
+              class="card_img"
+              src="assets/menu/coffee-3.png"
+              alt="Honey raf"
+            />
+            <h3 class="card_name">Honey raf</h3>
+            <p class="card_text">
+              Espresso with frothed milk, cream and aromatic honey
+            </p>
+            <p class="card_price">$5.50</p>
+          </article>
+          <article class="card">
+            <img
+              class="card_img"
+              src="assets/menu/coffee-4.png"
+              alt="Ice cappuccino"
+            />
+            <h3 class="card_name">Ice cappuccino</h3>
+            <p class="card_text">
+              Cappuccino with soft thick foam in summer version with ice
+            </p>
+            <p class="card_price">$5.00</p>
+          </article>
+          <article class="card">
+            <img
+              class="card_img"
+              src="assets/menu/coffee-5.png"
+              alt="Espresso"
+            />
+            <h3 class="card_name">Espresso</h3>
+            <p class="card_text">Classic black coffee</p>
+            <p class="card_price">$4.50</p>
+          </article>
+          <article class="card">
+            <img class="card_img" src="assets/menu/coffee-6.png" alt="Latte" />
+            <h3 class="card_name">Latte</h3>
+            <p class="card_text">
+              Espresso coffee with the addition of steamed milk and dense milk
+              foam
+            </p>
+            <p class="card_price">$5.50</p>
+          </article>
+          <article class="card">
+            <img
+              class="card_img"
+              src="assets/menu/coffee-7.png"
+              alt="Latte macchiato"
+            />
+            <h3 class="card_name">Latte macchiato</h3>
+            <p class="card_text">Espresso with frothed milk and chocolate</p>
+            <p class="card_price">$5.50</p>
+          </article>
+          <article class="card">
+            <img
+              class="card_img"
+              src="assets/menu/coffee-8.png"
+              alt="Coffee with cognac"
+            />
+            <h3 class="card_name">Coffee with cognac</h3>
+            <p class="card_text">
+              Fragrant black coffee with cognac and whipped cream
+            </p>
+            <p class="card_price">$6.50</p>
+          </article>
+        </div>
+        <button type="button" class="catalog_more">Load more</button>
+      </section>
+    </main>
 
     <footer class="footer" id="contacts">
       <div class="first_column">
