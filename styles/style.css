@@ -290,6 +290,18 @@ footer .first_column .sub_title {
     display: grid;
   }
 
+  header .header_theme_switcher {
+    width: 104px;
+    height: 52px;
+    border-radius: 26px;
+  }
+
+  header .header_theme_switcher button {
+    width: 44px;
+    height: 40px;
+    border-radius: 20px;
+  }
+
   .footer {
     flex-direction: column;
     justify-content: flex-start;
@@ -311,6 +323,10 @@ footer .first_column .sub_title {
 
   .container {
     padding: 0 16px;
+  }
+
+  .header_controls {
+    gap: 12px;
   }
 
   .footer {
