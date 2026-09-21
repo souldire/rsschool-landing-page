@@ -1,3 +1,12 @@
+/* normalize margins */
+h1,
+h2,
+h3,
+h4,
+p {
+  margin: 0;
+}
+
 /* Light theme - default */
 :root {
   /* text */
@@ -266,6 +275,52 @@ footer .first_column .sub_title {
   border-color: var(--text-accent);
 }
 
+/* Hero */
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 40px;
+  padding: 100px;
+  border-radius: 40px;
+  background: var(--bg-container) url("../assets/hero/hero-bg.jpg") center / cover no-repeat;
+}
+
+.hero_title {
+  width: 100%;
+  max-width: 530px;
+  font-size: var(--fs-h1);
+  line-height: var(--lh-h1);
+  font-weight: var(--fw-semibold);
+  color: var(--text-inverse);
+}
+
+.hero_accent {
+  font-style: italic;
+  color: var(--text-accent);
+}
+
+.hero_text {
+  width: 100%;
+  max-width: 530px;
+  font-size: var(--fs-body);
+  line-height: var(--lh-body);
+  color: var(--text-inverse);
+}
+
+.hero_btn {
+  padding: 20px 78px;
+  border-radius: 32px;
+  background-color: var(--text-inverse);
+  color: var(--text-primary);
+  font-size: var(--fs-body);
+  line-height: var(--lh-body);
+  font-weight: var(--fw-semibold);
+  text-decoration: none;
+  cursor: pointer;
+}
+
 /* adaptive */
 
 .header_burger_btn {
@@ -302,6 +357,10 @@ footer .first_column .sub_title {
     border-radius: 20px;
   }
 
+  .hero {
+    padding: 100px 60px;
+  }
+
   .footer {
     flex-direction: column;
     justify-content: flex-start;
@@ -318,6 +377,8 @@ footer .first_column .sub_title {
 
 @media (max-width: 380px) {
   :root {
+    --fs-h1: 42px;
+    --lh-h1: 115%;
     --fs-h2: 32px;
   }
 
@@ -327,6 +388,10 @@ footer .first_column .sub_title {
 
   .header_controls {
     gap: 12px;
+  }
+
+  .hero {
+    padding: 60px 16px;
   }
 
   .footer {
