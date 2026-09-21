@@ -612,12 +612,12 @@ footer .first_column .sub_title {
     color 0.3s;
 }
 
-.tab:hover:not([aria-selected="true"]) {
+.tab:hover:not([aria-pressed="true"]) {
   background-color: var(--bg-container);
   color: var(--text-inverse);
 }
 
-.tab[aria-selected="true"] {
+.tab[aria-pressed="true"] {
   background-color: var(--text-primary);
   border-color: var(--text-primary);
   color: var(--text-inverse);
@@ -638,7 +638,7 @@ footer .first_column .sub_title {
   height: auto;
 }
 
-.tab[aria-selected="true"] .tab_icon {
+.tab[aria-pressed="true"] .tab_icon {
   background-color: var(--text-inverse);
 }
 
