@@ -5,6 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Coffee House</title>
     <link rel="icon" href="favicon.png" type="image/png" />
+    <script>
+      document.documentElement.dataset.theme =
+        localStorage.getItem("theme") ??
+        (matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+    </script>
 
     <link rel="stylesheet" href="styles/modern-normalize.css" />
     <link rel="stylesheet" href="styles/style.css" />
@@ -12,7 +17,16 @@
   <body>
     <header class="header container">
       <a href="index.html" class="header_logo">
-        <img src="assets/header/logo.svg" alt="Coffee House Logo" />
+        <img
+          class="header_logo_light"
+          src="assets/header/logo-light.svg"
+          alt="Coffee House Logo"
+        />
+        <img
+          class="header_logo_dark"
+          src="assets/header/logo-dark.svg"
+          alt=""
+        />
       </a>
 
       <nav class="header_nav">
@@ -508,5 +522,6 @@
         </ul>
       </div>
     </footer>
+    <script src="js/theme.js"></script>
   </body>
 </html>

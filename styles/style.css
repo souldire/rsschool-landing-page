@@ -95,6 +95,18 @@ header {
   display: block;
 }
 
+.header_logo img.header_logo_dark {
+  display: none;
+}
+
+[data-theme="dark"] .header_logo img.header_logo_light {
+  display: none;
+}
+
+[data-theme="dark"] .header_logo img.header_logo_dark {
+  display: block;
+}
+
 .header_nav ul {
   display: flex;
   list-style: none;
@@ -317,8 +329,8 @@ footer .first_column .sub_title {
 .hero_btn {
   padding: 20px 78px;
   border-radius: 32px;
-  background-color: var(--text-inverse);
-  color: var(--text-primary);
+  background-color: #e1d4c9;
+  color: #403f3d;
   font-size: var(--fs-body);
   line-height: var(--lh-body);
   font-weight: var(--fw-semibold);
