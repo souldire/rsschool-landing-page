@@ -781,6 +781,10 @@ footer .first_column .sub_title {
     grid-template-columns: repeat(2, 1fr);
   }
 
+  .card:nth-of-type(n + 5) {
+    display: none;
+  }
+
   .catalog_more {
     display: grid;
     place-items: center;
