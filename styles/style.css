@@ -618,8 +618,8 @@ footer .first_column .sub_title {
 }
 
 .tab[aria-pressed="true"] {
-  background-color: var(--text-primary);
-  border-color: var(--text-primary);
+  background-color: var(--bg-container);
+  border-color: var(--bg-container);
   color: var(--text-inverse);
 }
 
