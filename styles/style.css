@@ -712,6 +712,12 @@ footer .first_column .sub_title {
   cursor: pointer;
 }
 
+@media (max-width: 980px) {
+  .catalog_grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
 @media (max-width: 768px) {
   .header_nav,
   .header_menu_btn {
@@ -867,10 +873,8 @@ footer .first_column .sub_title {
     width: calc(100% - 32px);
     padding: 60px 16px 64px;
   }
-}
 
-@media (max-width: 980px) {
   .catalog_grid {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 3fr;
   }
 }
