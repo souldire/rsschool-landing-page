@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Coffee House</title>
+    <title>Menu</title>
     <link rel="icon" href="favicon.png" type="image/png" />
     <script>
       document.documentElement.dataset.theme =
@@ -32,18 +32,20 @@
       <nav class="header_nav">
         <ul class="header_nav_list">
           <li class="header_nav_item">
-            <a href="#favorite-coffee" class="header_nav_link"
+            <a href="index.html#favorite-coffee" class="header_nav_link"
               >Favourite coffee</a
             >
           </li>
           <li class="header_nav_item">
-            <a href="#about" class="header_nav_link">About</a>
+            <a href="index.html#about" class="header_nav_link">About</a>
           </li>
           <li class="header_nav_item">
-            <a href="#mobile-app" class="header_nav_link">Mobile app</a>
+            <a href="index.html#mobile-app" class="header_nav_link"
+              >Mobile app</a
+            >
           </li>
           <li class="header_nav_item">
-            <a href="#contacts" class="header_nav_link">Contact us</a>
+            <a href="index.html#contacts" class="header_nav_link">Contact us</a>
           </li>
         </ul>
       </nav>
@@ -164,195 +166,123 @@
     </header>
 
     <main class="main container">
-      <section class="hero">
-        <h1 class="hero_title">
-          <em class="accent">Enjoy</em> premium coffee at our charming cafe
+      <section class="catalog">
+        <h1 class="catalog_title">
+          Behind each of our cups hides an
+          <em class="accent">amazing surprise</em>
         </h1>
-        <p class="hero_text">
-          With its inviting atmosphere and delicious coffee options, the Coffee
-          House Resource is a popular destination for coffee lovers and those
-          seeking a warm and inviting space to enjoy their favorite beverage.
-        </p>
-        <a href="catalog.html" class="hero_btn">Menu</a>
-      </section>
-
-      <section class="slider" id="favorite-coffee">
-        <h2 class="slider_title">
-          Choose your <em class="accent">favorite</em> coffee
-        </h2>
-        <div class="slider_box">
-          <button
-            type="button"
-            class="slider_arrow"
-            aria-label="Previous coffee"
-          >
-            <svg
-              width="60"
-              height="60"
-              viewBox="0 0 60 60"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M36.5 30H24M30 36L24 30L30 24"
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-            </svg>
+        <div class="catalog_tabs">
+          <button type="button" class="tab" aria-pressed="true">
+            <span class="tab_icon"><img src="assets/menu/icons/coffee.png" alt="" /></span>
+            Coffee
           </button>
-          <div class="slider_card">
+          <button type="button" class="tab" aria-pressed="false">
+            <span class="tab_icon"><img src="assets/menu/icons/tea.png" alt="" /></span>
+            Tea
+          </button>
+          <button type="button" class="tab" aria-pressed="false">
+            <span class="tab_icon"><img src="assets/menu/icons/dessert.png" alt="" /></span>
+            Dessert
+          </button>
+        </div>
+        <div class="catalog_grid">
+          <article class="card">
             <img
-              class="slider_img"
-              src="assets/slider/coffee-slider-1.png"
-              alt="S’mores Frappuccino"
+              class="card_img"
+              src="assets/menu/coffee-1.png"
+              alt="Irish coffee"
             />
-            <h3 class="slider_name">S’mores Frappuccino</h3>
-            <p class="slider_text">
-              This new drink takes an espresso and mixes it with brown sugar and
-              cinnamon before being topped with oat milk.
+            <h2 class="card_name">Irish coffee</h2>
+            <p class="card_text">
+              Fragrant black coffee with Jameson Irish whiskey and whipped milk
             </p>
-            <p class="slider_price">$5.50</p>
-          </div>
-          <button type="button" class="slider_arrow" aria-label="Next coffee">
-            <svg
-              width="60"
-              height="60"
-              viewBox="0 0 60 60"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M24 30H36.5M30.5 36L36.5 30L30.5 24"
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-            </svg>
-          </button>
-        </div>
-        <div class="slider_pagination">
-          <span class="slider_control slider_control-active"></span>
-          <span class="slider_control"></span>
-          <span class="slider_control"></span>
-        </div>
-      </section>
-
-      <section class="about" id="about">
-        <h2 class="about_title">
-          Resource is <em class="accent">the perfect and cozy place</em> where
-          you can enjoy a variety of hot beverages, relax, catch up with
-          friends, or get some work done.
-        </h2>
-        <div class="about_gallery">
-          <div class="about_column">
+            <p class="card_price">$7.00</p>
+          </article>
+          <article class="card">
             <img
-              class="about_img about_img_tall"
-              src="assets/about/about-1.jpg"
-              alt="Coffee"
+              class="card_img"
+              src="assets/menu/coffee-2.png"
+              alt="Kahlua coffee"
             />
+            <h2 class="card_name">Kahlua coffee</h2>
+            <p class="card_text">
+              Classic coffee with milk and Kahlua liqueur under a cap of frothed
+              milk
+            </p>
+            <p class="card_price">$7.00</p>
+          </article>
+          <article class="card">
             <img
-              class="about_img about_img_short"
-              src="assets/about/about-2.jpg"
-              alt="Coffee"
+              class="card_img"
+              src="assets/menu/coffee-3.png"
+              alt="Honey raf"
             />
-          </div>
-          <div class="about_column">
+            <h2 class="card_name">Honey raf</h2>
+            <p class="card_text">
+              Espresso with frothed milk, cream and aromatic honey
+            </p>
+            <p class="card_price">$5.50</p>
+          </article>
+          <article class="card">
             <img
-              class="about_img about_img_short"
-              src="assets/about/about-3.jpg"
-              alt="Coffee"
+              class="card_img"
+              src="assets/menu/coffee-4.png"
+              alt="Ice cappuccino"
             />
+            <h2 class="card_name">Ice cappuccino</h2>
+            <p class="card_text">
+              Cappuccino with soft thick foam in summer version with ice
+            </p>
+            <p class="card_price">$5.00</p>
+          </article>
+          <article class="card">
             <img
-              class="about_img about_img_tall"
-              src="assets/about/about-4.jpg"
-              alt="Coffee"
+              class="card_img"
+              src="assets/menu/coffee-5.png"
+              alt="Espresso"
             />
-          </div>
+            <h2 class="card_name">Espresso</h2>
+            <p class="card_text">Classic black coffee</p>
+            <p class="card_price">$4.50</p>
+          </article>
+          <article class="card">
+            <img class="card_img" src="assets/menu/coffee-6.png" alt="Latte" />
+            <h2 class="card_name">Latte</h2>
+            <p class="card_text">
+              Espresso coffee with the addition of steamed milk and dense milk
+              foam
+            </p>
+            <p class="card_price">$5.50</p>
+          </article>
+          <article class="card">
+            <img
+              class="card_img"
+              src="assets/menu/coffee-7.png"
+              alt="Latte macchiato"
+            />
+            <h2 class="card_name">Latte macchiato</h2>
+            <p class="card_text">Espresso with frothed milk and chocolate</p>
+            <p class="card_price">$5.50</p>
+          </article>
+          <article class="card">
+            <img
+              class="card_img"
+              src="assets/menu/coffee-8.png"
+              alt="Coffee with cognac"
+            />
+            <h2 class="card_name">Coffee with cognac</h2>
+            <p class="card_text">
+              Fragrant black coffee with cognac and whipped cream
+            </p>
+            <p class="card_price">$6.50</p>
+          </article>
         </div>
-      </section>
-
-      <section class="app" id="mobile-app">
-        <div class="app_content">
-          <h2 class="app_title">
-            <em class="accent">Download</em> our app to start ordering
-          </h2>
-          <p class="app_text">
-            Download the Resource app today and experience the comfort of
-            ordering your favorite coffee from wherever you are.
-          </p>
-          <div class="app_buttons">
-            <a
-              href="https://www.apple.com/app-store/"
-              target="_blank"
-              class="app_btn"
-            >
-              <span class="app_btn_icon">
-                <svg
-                  width="27"
-                  height="32"
-                  viewBox="0 0 27 32"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M22.0578 16.8306C22.021 12.8323 25.4156 10.8871 25.5708 10.7966C23.6483 8.06361 20.6684 7.69021 19.6213 7.66043C17.1185 7.40364 14.6909 9.12057 13.4159 9.12057C12.1156 9.12057 10.1523 7.68524 8.03638 7.72742C5.31352 7.76836 2.76624 9.30541 1.36919 11.6922C-1.51399 16.5589 0.636305 23.7107 3.39861 27.6446C4.7804 29.5711 6.39503 31.7223 8.50843 31.6466C10.576 31.5635 11.3483 30.3614 13.8435 30.3614C16.3157 30.3614 17.0409 31.6466 19.1963 31.5982C21.4153 31.5635 22.8124 29.6629 24.1458 27.719C25.7426 25.5108 26.3839 23.3361 26.4093 23.2245C26.3572 23.2071 22.0998 21.6229 22.0578 16.8306Z"
-                    fill="#403F3D"
-                  />
-                  <path
-                    d="M17.9863 5.07263C19.0983 3.71671 19.8592 1.872 19.648 0C18.0384 0.0694711 16.0256 1.08549 14.8664 2.41164C13.8409 3.58025 12.9248 5.49566 13.1615 7.29695C14.9695 7.42845 16.8259 6.40747 17.9863 5.07263Z"
-                    fill="#403F3D"
-                  />
-                </svg>
-              </span>
-              <span class="app_btn_labels">
-                <span class="app_btn_caption">Available on the</span>
-                <span class="app_btn_name">App Store</span>
-              </span>
-            </a>
-            <a
-              href="https://play.google.com/store"
-              target="_blank"
-              class="app_btn"
-            >
-              <span class="app_btn_icon">
-                <svg
-                  width="36"
-                  height="36"
-                  viewBox="0 0 36 36"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M3.7558 3.20297C3.39335 3.57289 3.18359 4.14884 3.18359 4.89471V31.4994C3.18359 32.2453 3.39335 32.8212 3.7558 33.1911L3.84525 33.2723L19.1359 18.37V18.0181L3.84525 3.11575L3.7558 3.20297Z"
-                    fill="#403F3D"
-                  />
-                  <path
-                    d="M26.0776 23.34L20.9863 18.37V18.0181L26.0837 13.0482L26.1979 13.1128L32.2345 16.4617C33.9573 17.4121 33.9573 18.976 32.2345 19.9324L26.1979 23.2753L26.0776 23.34V23.34Z"
-                    fill="#403F3D"
-                  />
-                  <path
-                    d="M25.2733 24.2007L20.0617 19.1195L4.68164 34.1166C5.25384 34.7031 6.18695 34.7737 7.24807 34.1873L25.2733 24.2007"
-                    fill="#403F3D"
-                  />
-                  <path
-                    d="M25.2733 12.1876L7.24807 2.20103C6.18695 1.62058 5.25384 1.69125 4.68164 2.27772L20.0617 17.2688L25.2733 12.1876Z"
-                    fill="#403F3D"
-                  />
-                </svg>
-              </span>
-              <span class="app_btn_labels">
-                <span class="app_btn_caption">Available on</span>
-                <span class="app_btn_name">Google Play</span>
-              </span>
-            </a>
-          </div>
-        </div>
-        <img
-          class="app_screens"
-          src="assets/app/mobile-screens.png"
-          alt="Mobile screens"
-        />
+        <button type="button" class="catalog_more" aria-label="Load more">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M21.8883 13.5C21.1645 18.3113 17.013 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C16.1006 2 19.6248 4.46819 21.1679 8" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M17 8H21.4C21.7314 8 22 7.73137 22 7.4V3" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+        </button>
       </section>
     </main>
 
