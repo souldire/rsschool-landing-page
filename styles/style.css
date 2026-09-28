@@ -384,6 +384,20 @@ footer .first_column .sub_title {
   margin-top: 40px;
 }
 
+.slider_viewport {
+  overflow: hidden;
+  width: 480px;
+}
+
+.slider_track {
+  display: flex;
+  transition: transform 0.5s;
+}
+
+.slider_slide {
+  flex: 0 0 100%;
+}
+
 .slider_card {
   display: flex;
   flex-direction: column;
@@ -795,8 +809,13 @@ footer .first_column .sub_title {
     padding: 100px 60px;
   }
 
-  .slider_card {
+  .slider_viewport {
     width: min(480px, 100%);
+    min-width: 0;
+  }
+
+  .slider_card {
+    width: 100%;
     min-width: 0;
   }
 
