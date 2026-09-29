@@ -172,115 +172,61 @@
           <em class="accent">amazing surprise</em>
         </h1>
         <div class="catalog_tabs">
-          <button type="button" class="tab" aria-pressed="true">
-            <span class="tab_icon"><img src="assets/menu/icons/coffee.png" alt="" /></span>
+          <button
+            type="button"
+            class="tab"
+            data-category="coffee"
+            aria-pressed="true"
+          >
+            <span class="tab_icon"
+              ><img src="assets/menu/icons/coffee.png" alt=""
+            /></span>
             Coffee
           </button>
-          <button type="button" class="tab" aria-pressed="false">
-            <span class="tab_icon"><img src="assets/menu/icons/tea.png" alt="" /></span>
+          <button
+            type="button"
+            class="tab"
+            data-category="tea"
+            aria-pressed="false"
+          >
+            <span class="tab_icon"
+              ><img src="assets/menu/icons/tea.png" alt=""
+            /></span>
             Tea
           </button>
-          <button type="button" class="tab" aria-pressed="false">
-            <span class="tab_icon"><img src="assets/menu/icons/dessert.png" alt="" /></span>
+          <button
+            type="button"
+            class="tab"
+            data-category="dessert"
+            aria-pressed="false"
+          >
+            <span class="tab_icon"
+              ><img src="assets/menu/icons/dessert.png" alt=""
+            /></span>
             Dessert
           </button>
         </div>
-        <div class="catalog_grid">
-          <article class="card">
-            <img
-              class="card_img"
-              src="assets/menu/coffee-1.png"
-              alt="Irish coffee"
-            />
-            <h2 class="card_name">Irish coffee</h2>
-            <p class="card_text">
-              Fragrant black coffee with Jameson Irish whiskey and whipped milk
-            </p>
-            <p class="card_price">$7.00</p>
-          </article>
-          <article class="card">
-            <img
-              class="card_img"
-              src="assets/menu/coffee-2.png"
-              alt="Kahlua coffee"
-            />
-            <h2 class="card_name">Kahlua coffee</h2>
-            <p class="card_text">
-              Classic coffee with milk and Kahlua liqueur under a cap of frothed
-              milk
-            </p>
-            <p class="card_price">$7.00</p>
-          </article>
-          <article class="card">
-            <img
-              class="card_img"
-              src="assets/menu/coffee-3.png"
-              alt="Honey raf"
-            />
-            <h2 class="card_name">Honey raf</h2>
-            <p class="card_text">
-              Espresso with frothed milk, cream and aromatic honey
-            </p>
-            <p class="card_price">$5.50</p>
-          </article>
-          <article class="card">
-            <img
-              class="card_img"
-              src="assets/menu/coffee-4.png"
-              alt="Ice cappuccino"
-            />
-            <h2 class="card_name">Ice cappuccino</h2>
-            <p class="card_text">
-              Cappuccino with soft thick foam in summer version with ice
-            </p>
-            <p class="card_price">$5.00</p>
-          </article>
-          <article class="card">
-            <img
-              class="card_img"
-              src="assets/menu/coffee-5.png"
-              alt="Espresso"
-            />
-            <h2 class="card_name">Espresso</h2>
-            <p class="card_text">Classic black coffee</p>
-            <p class="card_price">$4.50</p>
-          </article>
-          <article class="card">
-            <img class="card_img" src="assets/menu/coffee-6.png" alt="Latte" />
-            <h2 class="card_name">Latte</h2>
-            <p class="card_text">
-              Espresso coffee with the addition of steamed milk and dense milk
-              foam
-            </p>
-            <p class="card_price">$5.50</p>
-          </article>
-          <article class="card">
-            <img
-              class="card_img"
-              src="assets/menu/coffee-7.png"
-              alt="Latte macchiato"
-            />
-            <h2 class="card_name">Latte macchiato</h2>
-            <p class="card_text">Espresso with frothed milk and chocolate</p>
-            <p class="card_price">$5.50</p>
-          </article>
-          <article class="card">
-            <img
-              class="card_img"
-              src="assets/menu/coffee-8.png"
-              alt="Coffee with cognac"
-            />
-            <h2 class="card_name">Coffee with cognac</h2>
-            <p class="card_text">
-              Fragrant black coffee with cognac and whipped cream
-            </p>
-            <p class="card_price">$6.50</p>
-          </article>
-        </div>
+        <div class="catalog_grid"></div>
         <button type="button" class="catalog_more" aria-label="Load more">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M21.8883 13.5C21.1645 18.3113 17.013 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C16.1006 2 19.6248 4.46819 21.1679 8" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" />
-            <path d="M17 8H21.4C21.7314 8 22 7.73137 22 7.4V3" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" />
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M21.8883 13.5C21.1645 18.3113 17.013 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C16.1006 2 19.6248 4.46819 21.1679 8"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+            <path
+              d="M17 8H21.4C21.7314 8 22 7.73137 22 7.4V3"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
           </svg>
         </button>
       </section>
@@ -453,5 +399,7 @@
       </div>
     </footer>
     <script src="js/theme.js"></script>
+    <script src="js/catalog.js"></script>
+    <script src="js/menu.js"></script>
   </body>
 </html>
