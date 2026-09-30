@@ -5,6 +5,8 @@ const productsGrid = document.querySelector(".catalog_grid");
 const tabs = document.querySelectorAll(".tab");
 
 const moreBtn = document.querySelector(".catalog_more");
+const modalOverlay = document.querySelector(".modal-overlay");
+const modalCloseBtn = document.querySelector(".modal_close_btn");
 
 function renderCards() {
   productsGrid.innerHTML = "";
@@ -28,6 +30,7 @@ function renderCards() {
     `;
 
     card.style.animationDelay = (number - 1) * 0.1 + "s";
+    card.addEventListener("click", openModal);
     productsGrid.append(card);
 
     number = number + 1;
@@ -55,6 +58,16 @@ function resetMoreButton() {
   productsGrid.querySelectorAll(".card").forEach((card) => {
     card.classList.remove("show-all");
   });
+}
+
+function openModal() {
+  modalOverlay.classList.add("open");
+  document.body.style.overflow = "hidden";
+}
+
+function closeModal() {
+  modalOverlay.classList.remove("open");
+  document.body.style.overflow = "";
 }
 
 tabs.forEach((tab) => {
@@ -89,6 +102,20 @@ moreBtn.addEventListener("click", () => {
 window.addEventListener("resize", () => {
   if (window.innerWidth > 768) {
     resetMoreButton();
+  }
+});
+
+modalCloseBtn.addEventListener("click", closeModal);
+
+modalOverlay.addEventListener("click", (event) => {
+  if (event.target === modalOverlay) {
+    closeModal();
+  }
+});
+
+document.addEventListener("keydown", (event) => {
+  if (event.key === "Escape") {
+    closeModal();
   }
 });
 
