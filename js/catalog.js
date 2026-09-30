@@ -4,6 +4,8 @@ let activeCategory = "coffee";
 const productsGrid = document.querySelector(".catalog_grid");
 const tabs = document.querySelectorAll(".tab");
 
+const moreBtn = document.querySelector(".catalog_more");
+
 function renderCards() {
   productsGrid.innerHTML = "";
   const filtered = products.filter(
@@ -48,6 +50,13 @@ async function fetchProducts() {
   }
 }
 
+function resetMoreButton() {
+  moreBtn.classList.remove("hidden");
+  productsGrid.querySelectorAll(".card").forEach((card) => {
+    card.classList.remove("show-all");
+  });
+}
+
 tabs.forEach((tab) => {
   tab.addEventListener("click", () => {
     activeCategory = tab.dataset.category;
@@ -61,7 +70,26 @@ tabs.forEach((tab) => {
     });
 
     renderCards();
+    resetMoreButton();
   });
+});
+
+moreBtn.addEventListener("click", () => {
+  const cards = productsGrid.querySelectorAll(".card");
+
+  cards.forEach((card, index) => {
+    if (index >= 4) {
+      card.classList.add("show-all");
+    }
+  });
+
+  moreBtn.classList.add("hidden");
+});
+
+window.addEventListener("resize", () => {
+  if (window.innerWidth > 768) {
+    resetMoreButton();
+  }
 });
 
 fetchProducts();

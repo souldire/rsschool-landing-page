@@ -81,6 +81,8 @@ body {
   padding: 0 40px;
 }
 
+
+
 /* Header */
 
 header {
@@ -893,6 +895,14 @@ footer .first_column .sub_title {
   }
 
   .card:nth-of-type(n + 5) {
+    display: none;
+  }
+
+  .card.show-all:nth-of-type(n + 5) {
+    display: block;
+  }
+
+  .catalog_more.hidden {
     display: none;
   }
 
