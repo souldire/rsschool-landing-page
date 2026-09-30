@@ -7,6 +7,12 @@ const tabs = document.querySelectorAll(".tab");
 const moreBtn = document.querySelector(".catalog_more");
 const modalOverlay = document.querySelector(".modal-overlay");
 const modalCloseBtn = document.querySelector(".modal_close_btn");
+const modalImg = document.querySelector(".modal_img");
+const modalName = document.querySelector(".modal_name");
+const modalText = document.querySelector(".modal_text");
+const modalSizes = document.querySelector(".modal_sizes");
+const modalAdditives = document.querySelector(".modal_additives");
+const modalTotalPrice = document.querySelector(".modal_total_price");
 
 function renderCards() {
   productsGrid.innerHTML = "";
@@ -30,7 +36,8 @@ function renderCards() {
     `;
 
     card.style.animationDelay = (number - 1) * 0.1 + "s";
-    card.addEventListener("click", openModal);
+    const cardNumber = number;
+    card.addEventListener("click", () => openModal(product, cardNumber));
     productsGrid.append(card);
 
     number = number + 1;
@@ -60,7 +67,49 @@ function resetMoreButton() {
   });
 }
 
-function openModal() {
+function renderModal(product, cardNumber) {
+  modalImg.src = `assets/menu/${product.category}-${cardNumber}.png`;
+  modalImg.alt = product.name;
+  modalName.textContent = product.name;
+  modalText.textContent = product.description;
+
+  modalSizes.innerHTML = "";
+  const sizeKeys = Object.keys(product.sizes);
+
+  sizeKeys.forEach((key, index) => {
+    const button = document.createElement("button");
+    button.type = "button";
+    button.className = "modal_pill";
+    if (index === 0) {
+      button.setAttribute("aria-pressed", "true");
+    } else {
+      button.setAttribute("aria-pressed", "false");
+    }
+    button.innerHTML = `
+      <span class="modal_pill_icon">${key.toUpperCase()}</span>
+      <span>${product.sizes[key].size}</span>
+    `;
+    modalSizes.append(button);
+  });
+
+  modalAdditives.innerHTML = "";
+  product.additives.forEach((additive, index) => {
+    const button = document.createElement("button");
+    button.type = "button";
+    button.className = "modal_pill";
+    button.setAttribute("aria-pressed", "false");
+    button.innerHTML = `
+      <span class="modal_pill_icon">${index + 1}</span>
+      <span>${additive.name}</span>
+    `;
+    modalAdditives.append(button);
+  });
+
+  modalTotalPrice.textContent = `$${product.price}`;
+}
+
+function openModal(product, cardNumber) {
+  renderModal(product, cardNumber);
   modalOverlay.classList.add("open");
   document.body.style.overflow = "hidden";
 }
