@@ -1,5 +1,8 @@
 let products = [];
 let activeCategory = "coffee";
+let selectedProduct = null;
+let selectedSize = "s";
+let selectedAdditives = [];
 
 const productsGrid = document.querySelector(".catalog_grid");
 const tabs = document.querySelectorAll(".tab");
@@ -68,6 +71,10 @@ function resetMoreButton() {
 }
 
 function renderModal(product, cardNumber) {
+  selectedProduct = product;
+  selectedSize = "s";
+  selectedAdditives = [];
+
   modalImg.src = `assets/menu/${product.category}-${cardNumber}.png`;
   modalImg.alt = product.name;
   modalName.textContent = product.name;
@@ -80,6 +87,7 @@ function renderModal(product, cardNumber) {
     const button = document.createElement("button");
     button.type = "button";
     button.className = "modal_pill";
+    button.dataset.size = key;
     if (index === 0) {
       button.setAttribute("aria-pressed", "true");
     } else {
@@ -89,6 +97,7 @@ function renderModal(product, cardNumber) {
       <span class="modal_pill_icon">${key.toUpperCase()}</span>
       <span>${product.sizes[key].size}</span>
     `;
+    button.addEventListener("click", () => selectSize(key));
     modalSizes.append(button);
   });
 
@@ -102,10 +111,11 @@ function renderModal(product, cardNumber) {
       <span class="modal_pill_icon">${index + 1}</span>
       <span>${additive.name}</span>
     `;
+    button.addEventListener("click", () => toggleAdditive(index));
     modalAdditives.append(button);
   });
 
-  modalTotalPrice.textContent = `$${product.price}`;
+  updateTotal();
 }
 
 function openModal(product, cardNumber) {
@@ -117,6 +127,57 @@ function openModal(product, cardNumber) {
 function closeModal() {
   modalOverlay.classList.remove("open");
   document.body.style.overflow = "";
+}
+
+function selectSize(key) {
+  selectedSize = key;
+
+  modalSizes.querySelectorAll(".modal_pill").forEach((button) => {
+    if (button.dataset.size === key) {
+      button.setAttribute("aria-pressed", "true");
+    } else {
+      button.setAttribute("aria-pressed", "false");
+    }
+  });
+
+  updateTotal();
+}
+
+function toggleAdditive(index) {
+  const position = selectedAdditives.indexOf(index);
+
+  if (position === -1) {
+    selectedAdditives.push(index);
+  } else {
+    selectedAdditives.splice(position, 1);
+  }
+
+  modalAdditives.querySelectorAll(".modal_pill").forEach((button, i) => {
+    if (selectedAdditives.includes(i)) {
+      button.setAttribute("aria-pressed", "true");
+    } else {
+      button.setAttribute("aria-pressed", "false");
+    }
+  });
+
+  updateTotal();
+}
+
+function updateTotal() {
+  const sizePrice = parseFloat(
+    selectedProduct.sizes[selectedSize]["add-price"],
+  );
+  let additivesPrice = 0;
+
+  selectedAdditives.forEach((index) => {
+    additivesPrice += parseFloat(
+      selectedProduct.additives[index]["add-price"],
+    );
+  });
+
+  const total = parseFloat(selectedProduct.price) + sizePrice + additivesPrice;
+
+  modalTotalPrice.textContent = `$${total.toFixed(2)}`;
 }
 
 tabs.forEach((tab) => {
