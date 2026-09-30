@@ -24,6 +24,8 @@ function renderCards() {
       <p class="card_text">${product.description}</p>
       <p class="card_price">$${product.price}</p>
     `;
+
+    card.style.animationDelay = (number - 1) * 0.1 + "s";
     productsGrid.append(card);
 
     number = number + 1;
