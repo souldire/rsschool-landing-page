@@ -869,6 +869,10 @@ footer .first_column .sub_title {
   color: var(--text-primary);
 }
 
+[data-theme="dark"] .modal_pill[aria-pressed="true"] .modal_pill_icon {
+  color: #403f3d;
+}
+
 .modal_total {
   display: flex;
   justify-content: space-between;
