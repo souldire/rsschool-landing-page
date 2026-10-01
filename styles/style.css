@@ -1149,6 +1149,9 @@ footer .first_column .sub_title {
 }
 
 @media (max-width: 380px) {
+  .modal_img {
+    display: none;
+  }
   .slider_arrow {
     display: none;
   }
