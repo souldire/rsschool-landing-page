@@ -81,8 +81,6 @@ body {
   padding: 0 40px;
 }
 
-
-
 /* Header */
 
 header {
@@ -983,24 +981,34 @@ footer .first_column .sub_title {
     border-radius: 20px;
   }
 
-  header .mobile-menu.open {
-    background-color: var(--bg-page);
+  header .mobile-menu {
     position: absolute;
     top: 100%;
     display: flex;
     width: 100%;
     min-height: calc(100vh - 100%);
-    top: 100px;
     flex-direction: column;
     justify-content: start;
     align-items: center;
     gap: 60px;
+    padding-top: 60px;
+    background-color: var(--bg-page);
     font-size: 32px;
     font-weight: 600;
     text-align: center;
+    opacity: 0;
+    visibility: hidden;
+    transition:
+      opacity 0.5s,
+      visibility 0.5s;
   }
 
-  header .mobile-menu.open ul {
+  header .mobile-menu.open {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  header .mobile-menu ul {
     display: flex;
     flex-direction: column;
     gap: 20px;
